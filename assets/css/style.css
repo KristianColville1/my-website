@@ -1,86 +1,85 @@
 /* fonts here */
-@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Merriweather:wght@300;700&display=swap');
+
+:root {
+    --red: #F15025;
+    --White: #FFFFFF;
+    --light-gray: #e6e8ee;
+    --dark-gray: #ced0ce;
+    --black: #191919;
+    --violet: #9593d9;
+    --lavender: #7c90db;
+
+
+
+}
 
 body {
     margin: 0;
     padding: 0;
     border: none;
     font-size: 1.2rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'EB Garamond', serif;
+    background-color: var(--light-gray);
 }
 
-/* navigational links - menu bar */
 header {
     width: 100%;
     height: 60px;
-    font-family: 'Quintessential', cursive;
-    font-weight: 600;
-    background-color: #102542;
-}
-
-.main-logo {
-    width: 40px;
-    height: 40px;
-    text-decoration: none;
-    color: #F87060;
     position: absolute;
-    margin: 10px 0 0 10px;
+    top: 0;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    background-color: var(--lavender);
 }
 
-.main-logo:hover {
-    color: #FFFFFF;
+nav {
+    color: var(--White);
+    letter-spacing: 1px;
 }
 
 nav ul {
     list-style-type: none;
-    float: right;
 }
-
-nav ul li {
-    display: inline;
-    float: left;
-    padding: 0 25px;
-    letter-spacing: 2px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #F87060;
-}
-
-nav ul li a:hover {
-    color: #FFFFFF;
-}
-
 
 /* footer and links */
 
 footer {
     width: 100%;
-    height: 150px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    left: 0;
-    background-color: #F87060;
-    text-align: center;
+    background-color: var(--violet);
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 700px;
+}
+
+.author-credit {
+    float: left;
+    font-size: 1.2rem;
 }
 
 footer ul {
     list-style-type: none;
-    font-size: 3rem;
+    float: right;
 }
 
-footer ul li {
+footer li {
+    font-size: 1.8rem;
+    margin: 5px;
     display: inline;
-    padding: 0 3vw;
 }
 
-footer ul li a {
-    text-decoration: none;
-    color: #102542;
+footer a {
+    color: var(--black);
 }
 
-footer ul li a:hover {
-    color: #4392F1;
+footer a:hover {
+    color: var(--red);
 }
 
