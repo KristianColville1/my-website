@@ -115,13 +115,13 @@ main {
 
 .container-row {
     width: 900px;
-    
+
     display: flex;
     flex-direction: row;
 }
 
 /* ------------------------------------------------- Added with JavaScript */
 
-h1#welcome-ani {
+h1.welcome-msg {
     font-size: 4rem;
 }
