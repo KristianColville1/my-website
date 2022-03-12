@@ -124,17 +124,13 @@ main {
 /*---------------------------- */
 
 #side-nav {
-    width: 5vw;
+    width: 100px;
     height: 100%;
     font-size: 2rem;
     background-color: var(--light-gray);
-    border-right: 5px inset var(--dark-gray);
+    border-right: 2px inset var(--dark-gray);
     position: absolute;
     left: 0;
-}
-
-#side-nav:hover {
-    background-color: var(--dark-gray);
 }
 
 #side-nav-list {
@@ -143,8 +139,11 @@ main {
 }
 
 .side-items {
-    margin-top: 10vh;
+    height: 100px;
+    margin-top: 7vh;
     cursor: pointer;
+
+    display: block;
 }
 
 .side-items:hover {
@@ -156,8 +155,13 @@ main {
 }
 
 @keyframes bigger {
-    from {font-size: 2rem;}
-    to {font-size: 3rem;}
+    from {
+        font-size: 2rem;
+    }
+    to {
+        transform: translateX(-5px);
+        font-size: 3rem;
+    }
   }
 
 /* ------------------------------------------------- Added with JavaScript */
