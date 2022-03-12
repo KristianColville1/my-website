@@ -28,12 +28,13 @@ header {
     width: 100%;
     height: 60px;
     max-height: 10vh;
-    position: absolute;
-    top: 0;
     font-family: 'Merriweather', serif;
     font-weight: 600;
     background-color: var(--lavender);
     border-bottom: 3px outset var(--violet);
+    position: absolute;
+    top: 0;
+    z-index: 2;
 }
 
 nav {
@@ -104,6 +105,7 @@ main {
 #inside-main {
     width: 100%;
     position: absolute;
+    z-index: -1;
     top: 10vh;
 
     display: flex;
@@ -122,14 +124,41 @@ main {
 /*---------------------------- */
 
 #side-nav {
-    width: 10vw;
+    width: 5vw;
     height: 100%;
+    font-size: 2rem;
+    background-color: var(--light-gray);
+    border-right: 5px inset var(--dark-gray);
     position: absolute;
     left: 0;
 }
 
+#side-nav:hover {
+    background-color: var(--dark-gray);
+}
 
+#side-nav-list {
+    list-style-type: none;
 
+}
+
+.side-items {
+    margin-top: 10vh;
+    cursor: pointer;
+}
+
+.side-items:hover {
+    color: var(--violet);
+    animation-name: bigger;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bigger {
+    from {font-size: 2rem;}
+    to {font-size: 3rem;}
+  }
 
 /* ------------------------------------------------- Added with JavaScript */
 
