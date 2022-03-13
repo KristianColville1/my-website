@@ -1,5 +1,5 @@
 /* fonts here */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Merriweather:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Great+Vibes&family=Merriweather:wght@300;700&display=swap');
 
 /* -----------------------------------------------------defaults */
 :root {
@@ -10,7 +10,9 @@
     --black: #191919;
     --violet: #9593d9;
     --lavender: #7c90db;
-
+    --midnight-green: #114B5F;
+    --french-blue: #3083DC;
+    --metal-seaweed: #028090;
 
 
 }
@@ -26,24 +28,12 @@ body {
 
 header {
     width: 100%;
-    height: 60px;
-    max-height: 10vh;
-    font-family: 'Merriweather', serif;
-    font-weight: 600;
-    background-color: var(--lavender);
+    height: 8vh;
+    max-height: 8vh;
     border-bottom: 3px outset var(--violet);
     position: absolute;
     top: 0;
     z-index: 2;
-}
-
-nav {
-    color: var(--White);
-    letter-spacing: 1px;
-}
-
-nav ul {
-    list-style-type: none;
 }
 
 .hidden-v {
@@ -53,6 +43,127 @@ nav ul {
 .hidden-d {
     display: none;
 }
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+h1.my-name {
+    color: var(--black) !important;
+    font-size: 3.5rem;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 4px;
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    animation-name: my-name;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+}
+
+
+@keyframes my-name {
+    0%{
+        color: var(--white);
+        
+    }
+    100%{
+        color: var(--white);
+    }
+
+}
+
+#about-me {
+    position: absolute;
+    width: 95%;
+    list-style-type: none;
+}
+
+/* ------------- Main body */
+main {
+    width: 100%;
+}
+
+#inside-main {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 10vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.container-row {
+    width: 900px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/*---------------------------- side nav */
+
+#side-nav {
+    width: 100px;
+    height: 100%;
+    font-size: 2rem;
+    background-color: var(--light-gray);
+    border-right: 2px inset var(--dark-gray);
+    position: absolute;
+    top: 8vh;
+    left: 0;
+}
+
+#side-nav-list {
+    list-style-type: none;
+
+}
+
+.side-items {
+    height: 60px;
+    margin-top: 7vh;
+    cursor: pointer;
+
+    display: block;
+}
+
+.side-items:hover {
+    color: var(--violet);
+    animation-name: bigger;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bigger {
+    from {
+        font-size: 2rem;
+    }
+    to {
+        transform: translateX(-8px);
+        font-size: 3rem;
+    }
+  }
+
+/* ----------------------------------------------------- Main middle */
+
+
+/* ------------------------------------------------- Added with JavaScript */
+
+h1.welcome-msg {
+    font-size: 4rem;
+}
+
+
 /* footer and links */
 
 footer {
@@ -95,77 +206,4 @@ footer a {
 
 footer a:hover {
     color: var(--red);
-}
-
-/* ------------- Main body */
-main {
-    width: 100%;
-}
-
-#inside-main {
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    top: 10vh;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-}
-
-.container-row {
-    width: 900px;
-
-    display: flex;
-    flex-direction: row;
-}
-
-/*---------------------------- */
-
-#side-nav {
-    width: 100px;
-    height: 100%;
-    font-size: 2rem;
-    background-color: var(--light-gray);
-    border-right: 2px inset var(--dark-gray);
-    position: absolute;
-    left: 0;
-}
-
-#side-nav-list {
-    list-style-type: none;
-
-}
-
-.side-items {
-    height: 100px;
-    margin-top: 7vh;
-    cursor: pointer;
-
-    display: block;
-}
-
-.side-items:hover {
-    color: var(--violet);
-    animation-name: bigger;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-}
-
-@keyframes bigger {
-    from {
-        font-size: 2rem;
-    }
-    to {
-        transform: translateX(-5px);
-        font-size: 3rem;
-    }
-  }
-
-/* ------------------------------------------------- Added with JavaScript */
-
-h1.welcome-msg {
-    font-size: 4rem;
 }
